@@ -1,4 +1,5 @@
 (function () {
+    //Логика изменения размера изображения
     var SIZE_STEP = 25;
     var MIN_SIZE = 25;
     var MAX_SIZE = 100;
@@ -31,10 +32,11 @@
     }
 
     resizeMin.addEventListener("click", onResizeMinClick);
-
     resizeMax.addEventListener("click", onResizeMaxClick);
-
     sizeValue.addEventListener("input", onSizeValueChange);
+
+    //Логика применения эффектов
+    
 
     window.changeEffectValue = function () {
         var currentValue = levelVal.offsetWidth;
