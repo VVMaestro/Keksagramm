@@ -1,5 +1,5 @@
 (function () {
-    document.querySelector(".upload-overlay").classList.remove("hidden");
+    // document.querySelector(".upload-overlay").classList.remove("hidden");
     var levelPin = document.querySelector(".upload-effect-level-pin");
     var levelVal = document.querySelector(".upload-effect-level-val");
     var levelLine = document.querySelector(".upload-effect-level-line");    
