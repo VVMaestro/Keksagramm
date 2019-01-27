@@ -5,7 +5,7 @@
 	var MAX_OF_HASHT = 5;
 	var MAX_OF_HT_LENGTH = 20;
 
-	var onHashTegInput = function (evt) {
+	var onHashTegInput = function () {
 		debugger;
 		//если поле ввода пустое - не проверяем форму
 		if (hashTegInput.value != "") {
@@ -17,10 +17,14 @@
 		}
 		//удаляем пробелы
 		for (var l = 0; l < hashTags.length; l++) {
-			if (hashTags[l] == "") hashTags.splice(l, 1);//проблема с уменьшением размера массива и прерыванием работы цикла!
+			if (hashTags[l] == "") {
+				hashTags.splice(l, 1);
+				l--;
+			}
 		}
 		//проверки
-		for (var i = 0; i < hashTags.length; i++) {			
+		for (var i = 0; i < hashTags.length; i++) {
+			hashTags[i] = hashTags[i].toLowerCase();
 			//проверяем наличие решётки в начале
 			var hashTegFirstChar = hashTags[i].charAt(0);
 			if (hashTegFirstChar != "#") {

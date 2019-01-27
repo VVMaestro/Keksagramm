@@ -54,5 +54,5 @@
             fillBigPicture(pictureLink, window.randomData.photos);
             openBigPicture();
         }
-    });
+    });    
 })();
