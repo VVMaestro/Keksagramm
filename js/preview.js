@@ -36,7 +36,7 @@
 
     document.body.addEventListener("click", function (evt) {
         var pictureLink = evt.target.parentNode;
-        if (pictures.indexOf(pictureLink) != -1) {
+        if (pictureLink.dataset.unicHash) {
             evt.preventDefault();
             fillBigPicture(pictureLink, window.randomData.photos);
             openBigPicture();

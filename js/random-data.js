@@ -28,12 +28,13 @@
     }
 
     class Photo {
-        constructor(url, likes, comments, description, hashCode) {
+        constructor(url, likes, comments, description, hashCode, order) {
             this.url = url;
             this.likes = likes;
             this.comments = comments;
             this.description = description;
             this.hashCode = hashCode;
+            this.order = order;
         }
     }
 
@@ -54,7 +55,8 @@
             getRandomNumber(1, 25),
             getRandomComment(comments),
             descriptions[getRandomNumber(0, descriptions.length)],
-            hashCounter
+            hashCounter,
+            i
         );
     }
 
